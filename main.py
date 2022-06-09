@@ -29,8 +29,13 @@ class MusicPlayerAndroid(object):
             self.mplayer.prepare()
             self.length = self.mplayer.getDuration() / 1000
 <<<<<<< HEAD
+<<<<<<< HEAD
             Logger.info('mplayer load: %s' % filename)
             Logger.info('type: %s' % type(filename))
+=======
+            Logger.info('mplayer load: %s' %filename)
+            Logger.info('type: %s' %type(filename))
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 =======
             Logger.info('mplayer load: %s' %filename)
             Logger.info('type: %s' %type(filename))
@@ -57,6 +62,7 @@ class MusicPlayerAndroid(object):
     def seek(self, timepos_secs):
         self.mplayer.seekTo(timepos_secs * 1000)
 <<<<<<< HEAD
+<<<<<<< HEAD
         Logger.info('mplayer: seek %s' % int(timepos_secs))
 
     def pause(self):
@@ -64,6 +70,9 @@ class MusicPlayerAndroid(object):
             self.mplayer.pause()
         except:
             Logger.info('Internal player engine has not been initialized.')
+=======
+        Logger.info('mplayer: seek %s' %int(timepos_secs))
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 =======
         Logger.info('mplayer: seek %s' %int(timepos_secs))
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
@@ -91,6 +100,7 @@ class MusicPlayerWindows(object):
                 self.length = self.sound.length
                 self.actualsong = filename
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Logger.info('mplayer: load %s' % filename)
                 return True
             else:
@@ -102,6 +112,8 @@ class MusicPlayerWindows(object):
             self.sound.unload()
             self.__init__  # reset vars
 =======
+=======
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
                 Logger.info('mplayer: load %s' %filename)
                 return True
             else:
@@ -112,6 +124,9 @@ class MusicPlayerWindows(object):
         if self.sound != None:
             self.sound.unload()
             self.__init__   # reset vars
+<<<<<<< HEAD
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
+=======
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 
     def play(self):
@@ -123,7 +138,11 @@ class MusicPlayerWindows(object):
     def stop(self):
         self.isplaying = False
 <<<<<<< HEAD
+<<<<<<< HEAD
         self.secs = 0
+=======
+        self.secs=0
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 =======
         self.secs=0
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
@@ -134,7 +153,11 @@ class MusicPlayerWindows(object):
     def seek(self, timepos_secs):
         self.sound.seek(timepos_secs)
 <<<<<<< HEAD
+<<<<<<< HEAD
         Logger.info('mplayer: seek %s' % int(timepos_secs))
+=======
+        Logger.info('mplayer: seek %s' %int(timepos_secs))
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 =======
         Logger.info('mplayer: seek %s' %int(timepos_secs))
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
@@ -148,16 +171,22 @@ def main():
         # 'f:\\_mp3_diverse_\\Testsuite\\flac\\01 - Jam & Spoon - Stella (Jam & Spoon Mix).flac',
         # 'f:\\_mp3_\\P1\\1Start\\Hot Chip - boy from school.mp4'
 <<<<<<< HEAD
+<<<<<<< HEAD
     ]
 
     Logger.info('platform: %s' % platform)
 
     mplayer = ''
 =======
+=======
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
         ]
 
     Logger.info('platform: %s' %platform)
 
+<<<<<<< HEAD
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
+=======
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
     if platform == 'win':
         mplayer = MusicPlayerWindows()
@@ -167,6 +196,7 @@ def main():
         exit()
 
     for s in songs:
+<<<<<<< HEAD
 <<<<<<< HEAD
         if mplayer.load(s):  # checking load, seek
             mplayer.play()
@@ -178,18 +208,27 @@ def main():
             # mplayer.seek(90)
             # time.sleep(2)
 =======
+=======
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
         if mplayer.load(s):     # checking load, seek
             mplayer.play()
             time.sleep(2)
             mplayer.seek(90)
             time.sleep(2)
+<<<<<<< HEAD
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
+=======
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
             mplayer.stop()
             mplayer.unload()
 
         else:
 <<<<<<< HEAD
+<<<<<<< HEAD
             Logger.info('cant load song: %s' % s)
+=======
+            Logger.info('cant load song: %s' %s)
+>>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
 =======
             Logger.info('cant load song: %s' %s)
 >>>>>>> ec4605d083e18fca70b727a5d1ed1744b4a0276e
